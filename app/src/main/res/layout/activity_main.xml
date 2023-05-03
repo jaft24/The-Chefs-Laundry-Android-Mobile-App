@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcomebackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="166dp"
+        android:layout_height="330dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.454">
+
+        <Button
+            android:id="@+id/bt_about"
+            style="@style/BUTTON"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:clickable="true"
+            android:text="ABOUT"
+            android:textColor="#491512"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FF9800"
+            app:layout_constraintBottom_toTopOf="@+id/bt_faq"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_Highscore2"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/bt_Newgame"
+            style="@style/BUTTON"
+            android:layout_width="144dp"
+            android:layout_height="52dp"
+            android:clickable="true"
+            android:onClick="onNewGameButtonClicked"
+            android:text="NEW GAME"
+            android:textColor="#491512"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FF9800"
+            app:layout_constraintBottom_toTopOf="@+id/bt_Settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/bt_Highscore2"
+            style="@style/BUTTON"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:clickable="true"
+            android:text="H.SCORE"
+            android:textColor="#491512"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FF9800"
+            app:layout_constraintBottom_toTopOf="@+id/bt_about"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_Settings"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/bt_Settings"
+            style="@style/BUTTON"
+            android:layout_width="142dp"
+            android:layout_height="54dp"
+            android:clickable="true"
+            android:onClick="onSettingsButtonClicked"
+            android:text="SETTINGS"
+            android:textColor="#491512"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FF9800"
+            app:layout_constraintBottom_toTopOf="@+id/bt_Highscore2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_Newgame"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/bt_faq"
+            style="@style/BUTTON"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:clickable="true"
+            android:text="FAQ"
+            android:textColor="#491512"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FF9800"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_about"
+            app:layout_constraintVertical_bias="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_cat"
+        android:layout_width="255dp"
+        android:layout_height="344dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/cat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/volume_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/volume_on"
+        app:backgroundTint="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.887" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/volume_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/volume_off"
+        app:backgroundTint="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
