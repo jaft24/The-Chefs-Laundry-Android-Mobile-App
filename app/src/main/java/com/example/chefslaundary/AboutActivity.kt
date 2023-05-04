@@ -16,6 +16,7 @@ class AboutActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Find this button
         val home = findViewById<Button>(R.id.homeBtnAboutUs)
         home.setOnClickListener(){
             val intent = Intent(this, MainActivity::class.java)
